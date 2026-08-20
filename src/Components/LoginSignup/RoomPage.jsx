@@ -40,7 +40,7 @@ export default function RoomPage() {
   const [chatbotConnected, setChatbotConnected] = useState(false);
   const [chatbotStatus, setChatbotStatus] = useState("Initializing...");
 
-  const GEMINI_API_KEY = "AIzaSyAPpVVZmjnTV6HYD5zT4o_XGGoXaP01Sk8";
+  const GEMINI_API_KEY = "process.env.REACT_APP_GEMINI_API_KEY";
   const currentUser = auth?.currentUser;
   const displayName = currentUser?.email || `User-${currentUser?.uid?.slice(0, 8) || 'anonymous'}`;
 
